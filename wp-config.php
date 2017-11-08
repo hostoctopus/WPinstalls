@@ -176,7 +176,16 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
     exit();
   }
 }
-
+define('FS_METHOD', 'direct');
+define( 'FS_CHMOD_DIR', ( 0755 & ~ umask() ) );
+define( 'FS_CHMOD_FILE', ( 0755 & ~ umask() ) );
+define('FTP_BASE', __DIR__);
+define('FTP_CONTENT_DIR', __DIR__ .'/wp-content/');
+define('FTP_PLUGIN_DIR', __DIR__ .'/wp-content/plugins/');
+define('FTP_HOST', 'hostname');
+define('FTP_USER', 'username');
+define('FTP_PASS', 'password');
+define('FTP_SSL', true);
 
 
 
