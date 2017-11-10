@@ -86,7 +86,7 @@ else:
     endif;
 
     // FS writes aren't permitted in test or live, so we should let WordPress know to disable relevant UI
-    if ( in_array( $_ENV['PANTHEON_ENVIRONMENT'], array( 'test', 'live' ) ) && ! defined( 'DISALLOW_FILE_MODS' ) ) :
+    if ( in_array( $_ENV['PANTHEON_ENVIRONMENT'], array( 'test', 'live' ) ) && ! defined( '_FILE_MODS' ) ) :
         define( 'DISALLOW_FILE_MODS', true );
     endif;
 
@@ -387,3 +387,7 @@ require_once(ABSPATH . 'wp-settings.php');
 	location ~ ^/wp-includes/js/tinymce/langs/.+\.php$ { deny all; }
 	location ~ ^/wp-includes/theme-compat/ { deny all; }
 # END iThemes Security - Do not modify or remove this line
+// BEGIN iThemes Security - Do not modify or remove this line
+// iThemes Security Config Details: 2
+define( 'DISALLOW_FILE_EDIT', true ); // Disable File Editor - Security > Settings > WordPress Tweaks > File Editor
+// END iThemes Security - Do not modify or remove this line
