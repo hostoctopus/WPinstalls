@@ -186,7 +186,7 @@ define('FTP_HOST', 'appserver.dev.294ef13b-41af-4b74-abf4-2ef875fdc8a7.drush.in'
 define('FTP_USER', 'dev.294ef13b-41af-4b74-abf4-2ef875fdc8a7');
 define('FTP_PASS', '9a:29:2a:00:75:19:d7:17:e6:26:5c:04:0b:1f:ff:ad');
 define('FTP_SSL', true);
-
+define( 'WP_MEMORY_LIMIT', '96M' );
 
 
 /** Absolute path to the WordPress directory. */
